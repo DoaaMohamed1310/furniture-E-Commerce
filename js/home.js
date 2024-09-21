@@ -31,13 +31,13 @@ if (localStorage.getItem('cartItems') != null) {
 }
 // if user not found go login
 if (user==null) {
-    window.location.href='../login.html'
+    window.location.href='./../index.html'
 }
 
 // logout function
 function logOut() {
     localStorage.removeItem('loginUser')
-    window.location.href='../login.html'
+    window.location.href='./../index.html'
 }
 
 // list product 
