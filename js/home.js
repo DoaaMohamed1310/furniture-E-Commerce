@@ -30,9 +30,9 @@ if (localStorage.getItem('cartItems') != null) {
     cartList=JSON.parse(window.localStorage.getItem('cartItems'))
 }
 // if user not found go login
-if (user==null) {
-    window.location.href='./../index.html'
-}
+// if (user==null) {
+//     window.location.href='./../index.html'
+// }
 
 // logout function
 function logOut() {
