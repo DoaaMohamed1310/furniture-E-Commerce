@@ -28,7 +28,7 @@ function logOut() {
 // if user not found go login
 let user = JSON.parse(localStorage.getItem('loginUser'))
 if (user==null) {
-    window.location.href='../index.html'
+    window.location.href='index.html'
 }
 // massage welcome user
 let welcomeUser = document.querySelector('nav .wel')

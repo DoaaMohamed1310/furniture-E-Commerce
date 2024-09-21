@@ -37,7 +37,7 @@ if (user===null) {
 // logout function
 function logOut() {
     localStorage.removeItem('loginUser')
-    window.location.href='./../index.html'
+    window.location.href='index.html'
 }
 
 // list product 
