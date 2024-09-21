@@ -1,0 +1,33 @@
+body{
+    background-color: black;
+    background-image: url(../image/register/image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+}
+.layOut{
+    padding:50px;
+    border-radius: 20px;
+    position: relative;
+}
+.cover::before,body::before{
+    content: '';
+    background-color: #0000005e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+@media (max-width:770px) {
+    .cover{
+        display: none;
+    }
+}

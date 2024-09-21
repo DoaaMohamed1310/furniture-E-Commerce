@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <!-- render element normaly -->
+    <link rel="stylesheet" href="style/normalize.css">
+    <!-- font awesome libaray -->
+    <link rel="stylesheet" href="style/all.min.css">
+    <!-- line icon -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <!-- file css -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poetsen+One&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center ">
+            <div class="layOut bg-dark text-white row">
+                <div class=" col-md-6 ">
+                    <h2 class="mb-4 fs-1 fw-bold">Login 🔐</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label class="mb-1" for="email">E-Mail</label>
+                            <input type="email" placeholder="Enter Your Email ex:- user55@gmail.com" name="email" id="email" class="mb-1 email form-control">
+                            
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-1" for="password">Password</label>
+                            <input type="password" placeholder="Enter Password" name="password" id="password" class="mb-1 password form-control">
+                        </div>
+                        <button type="submit"  class="login btn btn-danger " >Login</button>
+                        <a href="register.html" class="btn btn-outline-danger">Register</a>
+                        <div class="err alert alert-danger d-none mt-2" role="alert">Incorrect email or password</div>
+
+                    </form>
+                </div>
+                <div class="cover position-relative col-md-6 p-0">
+                    <img src="./image/register/2.jpg" alt="" class="w-100 h-100">
+                </div>
+            </div>
+        </div>
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/login.js"></script>
+</body>
+</html>

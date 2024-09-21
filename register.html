@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shopping</title>
+        <!-- render element normaly -->
+        <link rel="stylesheet" href="style/normalize.css">
+        <!-- font awesome libaray -->
+        <link rel="stylesheet" href="style/all.min.css">
+        <!-- line icon -->
+        <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="style/bootstrap.min.css">
+        <!-- file css -->
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poetsen+One&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container d-flex justify-content-center align-items-center ">
+            <div class="layOut bg-dark text-white row">
+                <div class=" col-md-6 p-0">
+                    <h2 class="mb-4 fs-1 fw-bold">Sign Up 📝</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label class="mb-1" for="user">Username</label>
+                            <input type="text" placeholder="Enter Your Username ex:- user-us55" name="user" id="user" class="mb-1 user form-control">
+                            <div class="erruser alert alert-danger d-none" role="alert">
+                                    Please Enter Valid Username
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-1" for="email">E-Mail</label>
+                            <input type="email" placeholder="Enter Your Email ex:- user55@gmail.com" name="email" id="email" class="mb-1 email form-control">
+                            <div class="errEmail alert alert-danger d-none" role="alert">
+                                        Please Enter Valid Email
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-1" for="tel">Phone</label>
+                            <input type="tel" placeholder="Enter Your Phone" name="tel" id="tel" class="mb-1 phone form-control">
+                            <div class="errPhone alert alert-danger d-none" role="alert">
+                                        Please Enter Valid Phone
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-1" for="password">Password</label>
+                            <input type="password" placeholder="Enter Password" name="password" id="password" class="mb-1 password form-control">
+                            <div class="errPassword alert alert-danger d-none" role="alert">
+                                        Please Enter Valid PassWord Ex:- User@@5566
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-1" for="conpassword">Confirm Password</label>
+                            <input type="password" placeholder="Enter Confirm Password" name="conpassword" id="conpassword" class="mb-1 conPassword form-control">
+                            <div class="errConPass alert alert-danger d-none" role="alert">
+                                        Confirm Password is not the same as password
+                            </div>
+                        </div>
+                        <button type="submit" class="register btn btn-danger " >Sign Up</button>
+                        <a href="login.html" class="btn btn-outline-danger">Login</a>
+                    </form>
+                </div>
+                <div class="cover position-relative col-md-6 p-0">
+                    <img src="./image/register/2.jpg" alt="" class="w-100 h-100">
+                </div>
+            </div>
+        </div>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js" type="module"></script>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+h1::first-letter{
+    background-color:#dc3545 ;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+nav{
+    z-index: 2222;
+    width: 100%;
+}
+.up{
+    cursor: pointer;
+    transition: .5s;
+    z-index: 555;
+}
+a.nav-link:hover{
+    color: #dc3545 !important;
+} 
+.addCart{
+    bottom: -500px;
+    transition: .5s;
+}
+.card:hover .addCart{
+    bottom:0 ;
+}
+.offcanvas{
+    z-index: 5555;
+}
+
+.flip-card{
+    background-color: transparent;
+    min-height: 270px;
+    overflow: hidden;
+    perspective: 1000px;
+}
+.boxs img{
+    height: 270px;
+}
+.boxs{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .boxs {
+    transform: rotateY(180deg);
+}
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.back{
+    transform: rotateY(180deg);
+}
+#loader {
+    border: 12px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #ef0606; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
