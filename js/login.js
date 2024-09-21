@@ -8,7 +8,7 @@ btnLogin.addEventListener('click', (e) => {
     let client = userList.filter((ele) => { return ele.email == email.value && ele.password == password.value })
     if (client.length > 0) {
         err.classList.add('d-none')
-        document.querySelector('form').action = '../home.html'
+        document.querySelector('form').action = './../home.html'
         localStorage.setItem('loginUser',JSON.stringify(client))
         
     } else {

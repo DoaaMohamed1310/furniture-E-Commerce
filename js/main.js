@@ -93,8 +93,7 @@ btnRegister.addEventListener('click', (e) => {
         // add to local storge
         addToLocalStorge(usersList)
         // form action to login
-        document.querySelector('form').action='../index.html'
-        
+        document.querySelector('form').action='./../index.html'
     } else {
         e.preventDefault();
         
