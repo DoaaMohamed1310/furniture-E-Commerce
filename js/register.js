@@ -94,7 +94,7 @@ btnRegister.addEventListener('click', (e) => {
         addToLocalStorge(usersList)
         // form action to login
         // document.querySelector('.form').action='./../index.html'
-        document.location.href='furniture-E-Commerce/index.html'
+        document.location.href='index.html'
     } else {
         e.preventDefault();
         
