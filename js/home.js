@@ -31,7 +31,7 @@ if (localStorage.getItem('cartItems') != null) {
 }
 // if user not found go login
 if (user===null) {
-    window.location.href='./../index.html'
+    window.location.href='../index.html'
 }
 
 // logout function
