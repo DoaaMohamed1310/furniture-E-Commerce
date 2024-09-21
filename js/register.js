@@ -93,7 +93,7 @@ btnRegister.addEventListener('click', (e) => {
         // add to local storge
         addToLocalStorge(usersList)
         // form action to login
-        document.location.href='../index.html'
+        document.location.href='index.html'
     } else {
         e.preventDefault();
         
