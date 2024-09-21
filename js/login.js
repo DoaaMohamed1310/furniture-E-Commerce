@@ -10,7 +10,6 @@ btnLogin.addEventListener('click', (e) => {
         err.classList.add('d-none')
         document.querySelector('form').action = './../home.html'
         localStorage.setItem('loginUser',JSON.stringify(client))
-        
     } else {
         e.preventDefault()
         err.classList.remove('d-none')
