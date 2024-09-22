@@ -157,7 +157,8 @@ function addProductToCart(id) {
         localStorage.setItem('cartItems', JSON.stringify([...new Set(uniqListCart)]))
         numberCart()
     } else {
-        alert('Product Already Added')
+        massageShow('Product already added 👌!')
+        massageHide()
     }
     
 }
@@ -175,3 +176,17 @@ function numberCart() {
     }
 }
 numberCart()
+// function show massage success
+let massage= document.querySelector('.massage')
+function  massageShow(text){
+    massage.innerHTML=`<span class='text-white fw-border'>${text}</span>`
+    setTimeout(() => {
+        massage.classList.remove('opacity-0')
+    }, 100);
+}
+// function hide massage success
+function massageHide(){
+    setTimeout(() => {
+        massage.classList.add('opacity-0')
+    }, 2000);
+}
