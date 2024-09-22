@@ -23,7 +23,7 @@ document.querySelector('.up').onclick = () => {
 // logout function
 function logOut() {
     localStorage.removeItem('loginUser')
-    window.location.href='./../index.html'
+    window.location.href='index.html'
 }
 // if user not found go login
 let user = JSON.parse(localStorage.getItem('loginUser'))
