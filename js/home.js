@@ -1,4 +1,13 @@
-document.onreadystatechange = function() {
+
+let user = JSON.parse(localStorage.getItem('loginUser'))
+// if user not found go login
+if (user===null) {
+    window.location.href='index.html'
+}
+let welcomeUser = document.querySelector('nav .wel')
+// massage welcome user
+welcomeUser.innerHTML = user[0].usernmae.slice(0, 4) + ' 👋'
+document.onreadystatechange = function () {
     if (document.readyState !== "complete") {
         document.querySelector("body").style.visibility = "hidden";
         document.querySelector("#loader").style.visibility = "visible";
@@ -19,20 +28,12 @@ window.onscroll = () => {
 document.querySelector('.up').onclick = () => {
     window.scrollTo({top:0})
 }
-
-let welcomeUser = document.querySelector('nav .wel')
-// massage welcome user
-let user = JSON.parse(localStorage.getItem('loginUser'))
-welcomeUser.innerHTML = user[0].usernmae.slice(0, 4) + ' 👋' 
 // save cart items in localStorage
 let cartList = []
 if (localStorage.getItem('cartItems') != null) {
     cartList=JSON.parse(window.localStorage.getItem('cartItems'))
 }
-// if user not found go login
-if (user===null) {
-    window.location.href='index.html'
-}
+
 
 // logout function
 function logOut() {

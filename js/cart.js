@@ -1,4 +1,14 @@
-document.onreadystatechange = function() {
+// if user not found go login
+let user = JSON.parse(localStorage.getItem('loginUser'))
+if (user==null) {
+    window.location.href='index.html'
+}
+// massage welcome user
+let welcomeUser = document.querySelector('nav .wel')
+welcomeUser.innerHTML = user[0].usernmae.slice(0, 4) + ' 👋'
+
+
+document.onreadystatechange = function () {
     if (document.readyState !== "complete") {
         document.querySelector("body").style.visibility = "hidden";
         document.querySelector("#loader").style.visibility = "visible";
@@ -25,14 +35,7 @@ function logOut() {
     localStorage.removeItem('loginUser')
     window.location.href='index.html'
 }
-// if user not found go login
-let user = JSON.parse(localStorage.getItem('loginUser'))
-if (user==null) {
-    window.location.href='index.html'
-}
-// massage welcome user
-let welcomeUser = document.querySelector('nav .wel')
-welcomeUser.innerHTML = user[0].usernmae.slice(0, 4) + ' 👋'
+
 // add items in the page cart
 let cartItems = document.querySelector('.cartDesc')
 let items = JSON.parse(localStorage.getItem('cartItems'))
