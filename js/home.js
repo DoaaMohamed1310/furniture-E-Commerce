@@ -156,6 +156,8 @@ function addProductToCart(id) {
         let uniqListCart = [...new Set(cartList)]
         localStorage.setItem('cartItems', JSON.stringify([...new Set(uniqListCart)]))
         numberCart()
+        massageShow(`${elementCart[0].name} added to cart 👌!`)
+        massageHide()
     } else {
         massageShow('Product already added 👌!')
         massageHide()
