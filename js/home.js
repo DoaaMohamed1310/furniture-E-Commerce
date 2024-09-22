@@ -178,15 +178,19 @@ function numberCart() {
 numberCart()
 // function show massage success
 let massage= document.querySelector('.massage')
-function  massageShow(text){
+function massageShow(text) {
     massage.innerHTML=`<span class='text-white fw-border'>${text}</span>`
     setTimeout(() => {
         massage.classList.remove('opacity-0')
+        massage.classList.remove('d-none')
+
     }, 100);
 }
 // function hide massage success
 function massageHide(){
     setTimeout(() => {
         massage.classList.add('opacity-0')
+        massage.classList.add('d-none')
+
     }, 2000);
 }
