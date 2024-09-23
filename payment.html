@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/payment.css">
+    <title>shopping</title>
+</head>
+<body>
+    <div id="loader" class="center"></div>
+    <i class="up fa-solid fa-arrow-up fs-5 bg-danger text-white rounded-circle p-3 position-fixed end-0 bottom-0 m-3 opacity-0"></i>
+    <!-- start nav -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <h1 class="navbar-brand fs-3">Furniture</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                <li class="nav-item me-3">
+                <a class="nav-link fs-5" href="#">Home</a>
+                </li>
+                <li class="nav-item position-relative">
+                <a class="nav-link fs-5 pe-4 " href="./Cart.html">Cart <i class="fs-5 fa-solid fa-shopping-bag"></i></a>
+                <span class="numCart position-absolute top-0 end-0 bg-danger text-white p-1 rounded-3 fw-bold d-none "></span>
+                </li>
+            </ul>
+            <div> 
+                <button type="button" class="btn btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Log Out
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title fs-5 text-danger" id="exampleModalLabel" >Closing App</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Are Your Sure To Log Out
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-dark" onclick="logOut()">Yes</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <!-- ------ -->
+                <span class="wel"></span>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- payment -->
+    <div class="payment">
+        <div class="container py-5">
+            <div class="paymentInside d-flex gap-20px justify-content-around">
+                <div class="left">
+                    <div>
+                        <span class="fs-3">Username:</span>
+                        
+                        <span class="name fs-2 "></span>
+                    </div>
+                    <div>
+                        <span class="fs-3">Total Price :</span>
+                        <span class="total fs-2 text-danger fw-bold">500Egy</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="box-2">
+            <div class="box-inner-2">
+                <div>
+                    <p class="fw-bold">Payment Details</p>
+                    <p class="dis mb-3">Complete your purchase by providing your payment details</p>
+                </div>
+                <form action="">
+                    <div class="mb-3">
+                        <p class="dis fw-bold mb-2">Email address</p>
+                        <input class="form-control" type="email" value="luke@skywalker.com">
+                    </div>
+                    <div>
+                        <p class="dis fw-bold mb-2">Card details</p>
+                        <div class="d-flex align-items-center justify-content-between card-atm border rounded">
+                            <div class="fab fa-cc-visa ps-3"></div>
+                            <input type="text" class="form-control" placeholder="Card Details">
+                            <div class="d-flex w-50">
+                                <input type="text" class="form-control px-0" placeholder="MM/YY">
+                                <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV">
+                            </div>
+                        </div>
+                        <div class="my-3 cardname">
+                            <p class="dis fw-bold mb-2">Cardholder name</p>
+                            <input class="form-control" type="text">
+                        </div>
+                        <div class="address">
+                            <p class="dis fw-bold mb-3">Billing address</p>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected hidden>United States</option>
+                                <option value="1">India</option>
+                                <option value="2">Australia</option>
+                                <option value="3">Canada</option>
+                            </select>
+                            <div class="d-flex">
+                                <input class="form-control zip" type="text" placeholder="ZIP">
+                                <input class="form-control state" type="text" placeholder="State">
+                            </div>
+                            <div class=" my-3">
+                                <p class="dis fw-bold mb-2">VAT Number</p>
+                                <div class="inputWithcheck">
+                                    <input class="form-control" type="text" value="GB012345B9">
+                                    <span class="fas fa-check"></span>
+
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column dis">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <p>Subtotal</p>
+                                    <p><span class="fas fa-dollar-sign"></span>33.00</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <p>VAT<span>(20%)</span></p>
+                                    <p><span class="fas fa-dollar-sign"></span>2.80</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <p class="fw-bold">Total</p>
+                                    <p class="fw-bold"><span class="fas fa-dollar-sign"></span>35.80</p>
+                                </div>
+                                <div class="btn btn-danger mt-2">Pay<span class="fas fa-dollar-sign px-1"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end payment -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/payment.js"></script>
+</body>
+</html>
